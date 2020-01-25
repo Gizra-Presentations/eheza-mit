@@ -1,0 +1,113 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base00;
+$headingColor: $base01;
+$headingTextShadow: none;
+$backgroundColor: $base3;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+$heading1Size: 2.6em;
+$heading2Size: 1.6em;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+.reveal section img {
+	border: none;
+	box-shadow: none;
+}
+
+.reveal h1,
+.tagline {
+	background-color: black;
+	opacity: 0.6;
+	color: $blue;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.logo-grid {
+	display: flex;
+	justify-content: center;
+
+	.item {
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.slide-grid {
+	display: flex;
+
+	.slide-left,
+	.slide-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 20px;
+	}
+}
+
+.subtitle {
+	font-size: .8em;
+	background: $blue;
+	color: black;
+	padding: 0.5em 0;
+	font-weight: bold;
+}
