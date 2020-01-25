@@ -20,7 +20,7 @@ body {
 
 .reveal {
   font-family: "Lato", sans-serif;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: normal;
   color: #657b83; }
 
@@ -62,10 +62,10 @@ body {
   font-size: 2.6em; }
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.75em; }
 
 .reveal h3 {
-  font-size: 1.55em; }
+  font-size: 1em; }
 
 .reveal h4 {
   font-size: 1em; }
@@ -279,6 +279,9 @@ body {
 .reveal section img {
   border: none;
   box-shadow: none; }
+  .reveal section img.time-icon {
+    width: 30%;
+    margin: 0 auto; }
 
 .reveal h1,
 .tagline {
@@ -298,7 +301,11 @@ body {
     justify-content: center; }
 
 .slide-grid {
-  display: flex; }
+  display: grid; }
+  .slide-grid.one {
+    grid-template-columns: 1fr 1fr; }
+  .slide-grid.two {
+    grid-template-columns: 2fr 1fr; }
   .slide-grid .slide-left,
   .slide-grid .slide-right {
     display: flex;
@@ -307,8 +314,13 @@ body {
     padding: 0 20px; }
 
 .subtitle {
-  font-size: .8em;
   background: #268bd2;
   color: black;
   padding: 0.5em 0;
   font-weight: bold; }
+
+.improvements {
+  font-size: 0.8em; }
+
+ol li {
+  margin-top: 0.5em; }
